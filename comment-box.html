@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Comment</title>
+</head>
+<body>
+    <h1>Please add your comment</h1>
+    <div id="comment-box">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate animi facere et praesentium error sunt saepe, quo enim quasi assumenda, temporibus odio modi tempora deleniti eos dolorem molestiae eaque vel quis alias obcaecati? Suscipit nobis eos rerum aut, dicta qui amet neque! Tempore repudiandae doloribus nobis earum beatae saepe sit.</p>
+        <p>Laudantium modi officiis excepturi provident. Quae sapiente laboriosam quas excepturi voluptas? Corrupti ratione fuga tempore voluptate vel, qui magnam pariatur reiciendis, laboriosam eum optio cumque nam vitae repellat doloribus nulla corporis porro nihil quisquam vero quis cupiditate quibusdam. Accusamus tenetur labore natus asperiores minus reiciendis laborum molestiae voluptatum error unde.</p>
+        <p>Dolores non hic iure illo sequi eius? Sit porro deleniti magni ad quas inventore maiores esse corrupti voluptas enim, voluptatum harum debitis voluptates perspiciatis mollitia eum non suscipit modi atque nam officiis! Mollitia consectetur doloremque aliquid nobis! Saepe officiis non, eveniet culpa dolore vero! Quibusdam obcaecati impedit minus voluptate mollitia.</p>
+    </div>
+    <div>
+        <textarea name="" id="text-input" cols="60" rows="6"></textarea>
+        <br>
+        <button id="btn-post">post</button>
+    </div>
+    <script>
+        // add eventlistener to the post button
+        document.getElementById('btn-post').addEventListener('click',function (){
+            const textarea = document.getElementById('text-input');
+            const comment = textarea.value;
+            const commentdiv = document.getElementById('comment-box');
+            const p = document.createElement('p');
+            p.innerText=comment;
+            commentdiv.appendChild(p);
+            textarea.value ='';
+
+            
+
+
+        })
+
+    </script>
+</body>
+</html>
